@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calcularS()">calcularS</button>
+
+
+        <script>
+            function fatorialNaoRecursivo(n){
+            var fatorial = 1;
+            while(n > 1){                
+                fatorial = fatorial * n;
+                n--;
+            }
+            return fatorial;   
+        }
+
+        function calcularS(){
+            var valorN = 5;
+            var valorP = 3;
+
+            var fatorialN = fatorialNaoRecursivo(valorN);
+            var fatorialP = fatorialNaoRecursivo(valor);
+            var fatorialN_P = fatorialNaoRecursivo(valorN - valorP);
+
+            console.log(fatorialN)
+            console.log(fatorialP)
+            console.log(fatorialN_P)
+
+            var valorS = fatorial / (fatorialP * fatorialN_P)
+            console.log(valorS);
+
+            alert(resultado);
+        }
+        </script>
+</body>
+</html>
