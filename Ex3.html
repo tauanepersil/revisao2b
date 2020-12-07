@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> paralelepipedo </h3>
+    <input id="ladoAPrimeiro" type="number" placeholder="valor A" />
+    <input id="ladoBPrimeiro" type="number" placeholder="valor B" />
+    <input id="ladoCPrimeiro" type="number" placeholder="valor C" />
+
+    <h3>segundo paralelepipedo</h3>
+    <input id="ladoASegundo" type="number" placeholder="valor A" />
+    <input id="ladoBSegundo" type="number" placeholder="valor B" />
+    <input id="ladoCSegundo" type="number" placeholder="valor C" />
+
+    <h3>terceiro paralelepipedo</h3>
+    <input id="ladoATerceiro" type="number" placeholder="valor A" />
+    <input id="ladoBTerceiro" type="number" placeholder="valor B" />
+    <input id="ladoCTerceiro" type="number" placeholder="valor C" />
+    <br />
+    <br />
+     
+    <button onclick="calcular(`volume`)"> calcular volume </button>
+    <br />
+    <br />
+    <button onclick="calcular(`superficie`)">calcular superficie</button>
+   
+
+    <script>
+        function volumeParalelepipedo(A, B , C){
+            return A * B * C;
+        }
+        function superficieParalelepipedo(A, B, C){
+                return 2 * (A * B + A * C + B * C) 
+                }
+
+
+        function calcular(tipo){
+
+            var ladoAPrimeiro =  parseInt(document.getElementById("ladoAPrimeiro").value);
+            var ladoBPrimeiro =  parseInt(document.getElementById("ladoBPrimeiro").value);
+            var ladoCPrimeiro =  parseInt(document.getElementById("ladoCPrimeiro").value);
+           
+            var ladoASegundo =  parseInt(document.getElementById("ladoASegundo").value);
+            var ladoBSegundo =  parseInt(document.getElementById("ladoBSegundo").value);
+            var ladoCSegundo =  parseInt(document.getElementById("ladoCSegundo").value);
+
+
+            var ladoATerceiro =  parseInt(document.getElementById("ladoATerceiro").value);
+            var ladoBTerceiro =  parseInt(document.getElementById("ladoBTerceiro").value);
+            var ladoCTerceiro =  parseInt(document.getElementById("ladoCTerceiro").value);
+           
+           switch (tipo) {
+               case "volume":
+                    var volumePrimeiro = volumeParalelepipedo(ladoAPrimeiro, ladoBPrimeiro , ladoCPrimeiro);
+                    var volumeSegundo = volumeParalelepipedo(ladoASegundo,ladoBSegundo,ladoCSegundo);
+                    var volumeTerceiro = volumeParalelepipedo(ladoATerceiro,ladoBTerceiro, ladoCTerceiro);
+                    alert(`Volume 1 = ${volumePrimeiro}, Volume 2 = ${volumeSegundo} , Volume 3 = ${volumeTerceiro}`);
+                    break;
+                case "superficie":
+                    var superficiePrimeiro =superficieParalelepipedo(ladoAPrimeiro, ladoBPrimeiro, ladoCPrimeiro)
+                    var superficieSegundo = superficieParalelepipedo(ladoASegundo, ladoBSegundo, ladoCSegundo)
+                    var superficieTerceiro = superficieParalelepipedo(ladoATerceiro, ladoBTerceiro, ladoCTerceiro)
+                    alert(`superficie 1 = ${superficiePrimeiro}, superficie 2 = ${superficieSegundo} , Volume 3 = ${superficieTerceiro}`);
+                    break;
+                default :
+                    alert('nao existe tipo');
+                    break;
+
+           }
+        }
+        
+
+       
+
+    </script>
+</body>
+</html>
