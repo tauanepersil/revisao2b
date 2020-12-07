@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="largura" type="number" placeholder="Lagura do retângulo" />
+    <input id="comprimento" type="number" placeholder="comprimento do retângulo" />
+    <button onclick="calcularArea()">Calcular área</button>    
+    <script>
+
+        function AreaRetangulo(l , c){
+            return l * c;
+        }
+    function calcularArea(){
+            var larguraRetangulo = parseInt( document.getElementById("largura").value);
+            var comprimentoRetangulo = parseInt( document.getElementById("comprimento").value);
+            var resultadoAreaRetangulo = AreaRetangulo(larguraRetangulo,comprimentoRetangulo);
+            alert(`A área do retangulo é ${resultadoAreaRetangulo}`); 
+        }
+        
+
+
+    </script>
+</body>
+</html>
